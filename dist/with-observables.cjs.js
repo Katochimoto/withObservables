@@ -4,9 +4,8 @@ function _interopDefault (ex) { return (ex && (typeof ex === 'object') && 'defau
 
 var react = require('react');
 var hoistNonReactStatic = _interopDefault(require('hoist-non-react-statics'));
-var from = require('rxjs/observable/from');
-var combineLatest = require('rxjs/observable/combineLatest');
-var map = require('rxjs/operators/map');
+var rxjs = require('rxjs');
+var operators = require('rxjs/operators');
 
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
@@ -42,7 +41,7 @@ function combineLatestObject(object) {
   if (keys.length === 1) {
     var _key = keys[0]; // $FlowFixMe
 
-    return from.from(observables[0]).pipe(map.map(function (value) {
+    return rxjs.from(observables[0]).pipe(operators.map(function (value) {
       return {
         [_key]: value
       };
@@ -50,7 +49,7 @@ function combineLatestObject(object) {
   } // $FlowFixMe
 
 
-  return combineLatest.combineLatest(observables, function (...newValues) {
+  return rxjs.combineLatest(observables, function (...newValues) {
     return zipObj(keys, newValues);
   });
 }

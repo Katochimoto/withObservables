@@ -1,6 +1,6 @@
 {
   "name": "@nozbe/with-observables",
-  "version": "1.0.6-0",
+  "version": "1.0.7",
   "main": "dist/with-observables.cjs.js",
   "module": "dist/with-observables.esm.js",
   "scripts": {
@@ -34,7 +34,7 @@
   },
   "dependencies": {
     "hoist-non-react-statics": "^3.3.0",
-    "rxjs": "^6.4.0"
+    "rxjs": "^6.5.3"
   },
   "peerDependencies": {
     "react": "^16.4.2"

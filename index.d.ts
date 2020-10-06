@@ -1,6 +1,6 @@
 declare module "@nozbe/with-observables" {
   import { ComponentType } from "react";
-  import { Observable } from "rxjs/Observable";
+  import { Observable } from "rxjs";
 
   interface ObservableConvertible<T> {
     readonly observe: () => Observable<T>;

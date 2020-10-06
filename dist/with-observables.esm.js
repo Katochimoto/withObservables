@@ -1,8 +1,7 @@
 import { createElement, Component } from 'react';
 import hoistNonReactStatic from 'hoist-non-react-statics';
-import { from } from 'rxjs/observable/from';
-import { combineLatest } from 'rxjs/observable/combineLatest';
-import { map } from 'rxjs/operators/map';
+import { from, combineLatest } from 'rxjs';
+import { map } from 'rxjs/operators';
 
 function _inheritsLoose(subClass, superClass) {
   subClass.prototype = Object.create(superClass.prototype);
